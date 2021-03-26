@@ -1,4 +1,4 @@
-name: Designer CI
+name: Receipt React App CI
 
 on:
   push:
