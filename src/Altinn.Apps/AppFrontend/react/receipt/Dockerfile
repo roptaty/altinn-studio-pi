@@ -1,4 +1,4 @@
-# base image --
+# base image
 FROM node:14.16.0-alpine3.12  AS generate-receipt-app
 
 # Copy and install Lerna
