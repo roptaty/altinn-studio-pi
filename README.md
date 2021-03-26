@@ -1,6 +1,6 @@
 # Altinn 3
 
-The main repository is located at https://github.com/altinn/altinn-studio
+The main repository is located at https://github.com/altinn/altinn-studio and is part of the Pi Challenge: https://github.com/Altinn/altinn-studio/issues/5912
 
 
 
