@@ -1,3 +1,4 @@
+#
 FROM mcr.microsoft.com/dotnet/sdk:5.0.201-buster-slim AS build
 WORKDIR Authorization/
 
