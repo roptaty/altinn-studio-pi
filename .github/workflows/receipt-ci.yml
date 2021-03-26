@@ -1,4 +1,4 @@
-name: Register CI
+name: Receipt CI
 
 on:
   push:
