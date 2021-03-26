@@ -1,4 +1,5 @@
 # base image
+#base
 FROM 12.14.1-alpine3.11 AS generate-runtime-app
 
 # Copy and install Lerna
