@@ -9,7 +9,7 @@ RUN dotnet build Altinn.Platform.Receipt.csproj -c Release -o /app_output
 RUN dotnet publish Altinn.Platform.Receipt.csproj -c Release -o /app_output
 
 # Copy receipt frontend to public folder
-FROM altinn-receipt-react-app:latest AS generate-receipt-react-app
+FROM waaler/altinn-receipt-react-app:latest AS generate-receipt-react-app
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0.4-alpine3.13 AS final
 EXPOSE 5060
