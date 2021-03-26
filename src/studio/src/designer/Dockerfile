@@ -1,4 +1,5 @@
 # studio frontend
+#
 FROM node:14.16.0-alpine3.13 AS generate-studio-frontend
 
 # Copy and install Lerna
