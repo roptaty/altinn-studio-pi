@@ -29,7 +29,7 @@ jobs:
           context: src/Altinn.Platform/Altinn.Platform.Authorization
           file: src/Altinn.Platform/Altinn.Platform.Authorization/Authorization/Dockerfile
           push: github.event_name != 'pull_request'
-          tags: ${{ secrets.DOCKER_USERNAME }/altinn-authorization:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/altinn-authorization:latest
           
             
 
