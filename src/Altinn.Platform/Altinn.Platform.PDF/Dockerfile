@@ -4,7 +4,7 @@ WORKDIR build
 COPY . .
 RUN mvn -Pprod package
 
-FROM openjdk:15-jdk-slim-buster AS final
+FROM openjdk:15-jdk-buster-slim AS final
 WORKDIR app
 COPY --from=build /build/target .
 # setup the user and group
