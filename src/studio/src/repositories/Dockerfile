@@ -1,5 +1,4 @@
 # base image
-# y
 FROM gitea/gitea:1.13.6
 
 # copy configuration file
