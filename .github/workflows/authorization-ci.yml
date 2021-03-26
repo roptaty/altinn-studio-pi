@@ -18,10 +18,10 @@ jobs:
       - name: Build Authz container
         id: build_authz
         uses: docker/build-push-action@v2
-          with:
-            platforms: linux/arm64
-            context: src/Altinn.Platform/Altinn.Platform.Authorization
-            file: src/Altinn.Platform/Altinn.Platform.Authorization/Authorization/Dockerfile
+        with:
+          platforms: linux/arm64
+          context: src/Altinn.Platform/Altinn.Platform.Authorization
+          file: src/Altinn.Platform/Altinn.Platform.Authorization/Authorization/Dockerfile
             
 
         
