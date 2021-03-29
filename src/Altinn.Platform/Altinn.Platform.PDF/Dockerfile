@@ -2,7 +2,7 @@
 FROM maven:3.6.3-openjdk-15 AS build
 WORKDIR build
 COPY . .
-RUN mvn -Pprod --quiet package
+RUN mvn -Pprod --quiet -e package
 
 FROM openjdk:15-jdk-slim-buster AS final
 WORKDIR app
