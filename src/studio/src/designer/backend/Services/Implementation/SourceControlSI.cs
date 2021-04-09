@@ -67,9 +67,18 @@ namespace Altinn.Studio.Designer.Services.Implementation
             cloneOptions.CredentialsProvider = (a, b, c) => new UsernamePasswordCredentials { Username = GetAppToken(), Password = string.Empty };
             
             var localPath =  FindLocalRepoLocation(org, repository);
-            _logger.LogInformation("Local path: {Path}", localPath);
+            _logger.LogInformation("Remote path: {RemotePath} Local path: {LocalPath}", remoteRepo, localPath);
+            string result = string.Empty;
+            try 
+            {
+                result =  LibGit2Sharp.Repository.Clone(remoteRepo, localPath, cloneOptions);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "Cloning failed: {ex}", ex.Message);
+                throw;
+            }
 
-            var result =  LibGit2Sharp.Repository.Clone(remoteRepo, localPath, cloneOptions);
             _logger.LogInformation("<-- CloneRemoteRepository");
             return result;
         }
