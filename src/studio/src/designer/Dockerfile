@@ -84,6 +84,7 @@ COPY --from=altinn-studio-frontend /dist/dashboard.css ./wwwroot/designer/css/da
 COPY /AppTemplates/AspNet ./Templates/AspNet
 
 COPY src/designer/backend/Languages/ini ./Languages
-
+COPY src/designer/test-ca.crt /usr/local/share/ca-certificates
+RUN update-ca-certificates
 
 ENTRYPOINT ["dotnet", "Altinn.Studio.Designer.dll"]
