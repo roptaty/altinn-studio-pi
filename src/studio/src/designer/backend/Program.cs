@@ -36,7 +36,16 @@ namespace Altinn.Studio.Designer
         public static void Main(string[] args)
         {
             ConfigureSetupLogging();
-            CreateWebHostBuilder(args).Build().Run();
+            try 
+            {
+                CreateWebHostBuilder(args).Build().Run();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Oh no: {ex.Message}");
+
+                throw;
+            }
         }
 
         /// <summary>
